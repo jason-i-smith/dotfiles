@@ -1,12 +1,12 @@
-" Colors
+" COLORS
 "
 syntax enable
 
-" Tab behavior
+" TAB BEHAVIOR
 "
 set tabstop=2 softtabstop=2 expandtab
 
-" User Interface
+" USER INTERFACE
 "
 set number
 set showcmd
@@ -19,7 +19,7 @@ set showmatch
 "
 set incsearch
 set hlsearch
-" turn off search highlight
+" turn off search highlight:
 nnoremap ,<space> :nohlsearch<CR>
 
 " LEADER SHORTCUTS
