@@ -26,3 +26,6 @@ nnoremap ,<space> :nohlsearch<CR>
 "
 let mapleader=","
 
+" SNIPPETS
+"
+nnoremap ,yml :-1read $HOME/.vim/.skeleton.yml<CR>j$a
