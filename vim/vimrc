@@ -8,7 +8,7 @@ set tabstop=2 softtabstop=2 expandtab
 
 " USER INTERFACE
 "
-set number
+set relativenumber
 set showcmd
 set cursorline
 filetype indent on
@@ -29,3 +29,16 @@ let mapleader=","
 " SNIPPETS
 "
 nnoremap ,yml :-1read $HOME/.vim/.skeleton.yml<CR>j$a
+
+
+" FUNCTIONS
+"
+" toggle between number and relativenumber
+function! ToggleNumber()
+  if(&relativenumber == 1)
+    set norelativenumber
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
