@@ -1,0 +1,28 @@
+" Colors
+"
+syntax enable
+
+" Tab behavior
+"
+set tabstop=2 softtabstop=2 expandtab
+
+" User Interface
+"
+set number
+set showcmd
+set cursorline
+filetype indent on
+set wildmenu
+set showmatch
+
+" SEARCHING
+"
+set incsearch
+set hlsearch
+" turn off search highlight
+nnoremap ,<space> :nohlsearch<CR>
+
+" LEADER SHORTCUTS
+"
+let mapleader=","
+
