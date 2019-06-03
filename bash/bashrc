@@ -8,7 +8,7 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
-# User specific aliases and functions
+# User specific aliases
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
@@ -17,4 +17,8 @@ alias gaa='git add .'
 alias gc='git commit'
 alias gcm='git commit --message'
 alias pushit='git push -u origin master'
-alias tunnel='ssh -N -D 12345 ousted'
+alias tunnel='ssh -fN -D 12345 ousted'
+alias tunnel-check='ps u -C ssh'
+alias tunnel-kill='kill $(ps u -C ssh|grep ousted|tr -s " "|cut -d " " -f 2)'
+
+# User specific functions

@@ -32,7 +32,8 @@ nnoremap ,yml :-1read $HOME/.vim/.skeleton.yml<CR>j$a
 
 
 " FUNCTIONS
-"
+" ---------
+" Use with ':call <function>'
 " toggle between number and relativenumber
 function! ToggleNumber()
   if(&relativenumber == 1)
