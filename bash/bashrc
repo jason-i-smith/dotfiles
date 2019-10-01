@@ -18,7 +18,7 @@ alias gc='git commit'
 alias gcm='git commit --message'
 alias pushit='git push -u origin master'
 alias tunnel='ssh -fN -D 12345 ousted'
-alias tunnel-check='ps u -C ssh'
+alias tunnel-check='ps u -C ssh|egrep "COMMAND|ousted"'
 alias tunnel-kill='kill $(ps u -C ssh|grep ousted|tr -s " "|cut -d " " -f 2)'
 
 # User specific functions
