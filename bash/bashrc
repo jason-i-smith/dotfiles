@@ -20,5 +20,10 @@ alias pushit='git push -u origin master'
 alias tunnel='ssh -fN -D 12345 ousted'
 alias tunnel-check='ps u -C ssh|egrep "COMMAND|ousted"'
 alias tunnel-kill='kill $(ps u -C ssh|grep ousted|tr -s " "|cut -d " " -f 2)'
+alias a-update='ansible-playbook --vault-password-file=~/.ssh/vault_pass_secure /home/jsmith/Playbooks/dnf-update/dnf-update.yml'
+
+# User specific environment vars
+export GOPATH="/home/jsmith/go/"
 
 # User specific functions
+
