@@ -21,6 +21,9 @@ alias tunnel='ssh -fN -D 12345 ousted'
 alias tunnel-check='ps u -C ssh|egrep "COMMAND|ousted"'
 alias tunnel-kill='kill $(ps u -C ssh|grep ousted|tr -s " "|cut -d " " -f 2)'
 alias a-update='ansible-playbook --vault-password-file=~/.ssh/vault_pass_secure /home/jsmith/Playbooks/dnf-update/dnf-update.yml'
+alias ousted-sftp='sftp -o Port=8080 sftp-user@ousted.org'
+alias audio-fix='systemctl --user restart pipewire pipewire-pulse'
+alias restart-home-network='nmcli con down Fair\ Play && nmcli con up Fair\ Play'
 
 # User specific environment vars
 export GOPATH="/home/jsmith/go/"
