@@ -1,0 +1,50 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
+
+unset rc
+
+# User specific aliases
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias ga='git add'
+alias gaa='git add .'
+alias gc='git commit'
+alias gcm='git commit --message'
+alias pushit='git push -u origin master'
+alias tunnel='ssh -fN -D 12345 ousted'
+alias tunnel-check='ps u -C ssh|egrep "COMMAND|ousted"'
+alias tunnel-kill='kill $(ps u -C ssh|grep ousted|tr -s " "|cut -d " " -f 2)'
+alias a-update='ansible-playbook --vault-password-file=~/.ssh/vault_pass_secure /home/jsmith/Playbooks/dnf-update/dnf-update.yml'
+alias ousted-sftp='sftp -o Port=8080 sftp-user@ousted.org'
+alias audio-fix='systemctl --user restart pipewire pipewire-pulse'
+alias restart-home-network='nmcli con down Fair\ Play && nmcli con up Fair\ Play'
+
+# User specific environment vars
+export GOPATH="/home/jsmith/go/"
+
+# User specific functions
+
