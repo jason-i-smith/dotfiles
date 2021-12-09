@@ -45,6 +45,7 @@ alias restart-home-network='nmcli con down Fair\ Play && nmcli con up Fair\ Play
 
 # User specific environment vars
 export GOPATH="/home/jsmith/go/"
+export VAGRANT_HOME="/mnt/vm-images/vagrant/"
 
 # User specific functions
 
