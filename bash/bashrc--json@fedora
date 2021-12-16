@@ -46,6 +46,8 @@ alias restart-home-network='nmcli con down Fair\ Play && nmcli con up Fair\ Play
 # User specific environment vars
 export GOPATH="/home/jsmith/go/"
 export VAGRANT_HOME="/mnt/vm-images/vagrant/"
+# The following is to bypass issues installing winrm plugins for Vagrant:
+export VAGRANT_DISABLE_STRICT_DEPENDENCY_ENFORCEMENT=1
 
 # User specific functions
 
